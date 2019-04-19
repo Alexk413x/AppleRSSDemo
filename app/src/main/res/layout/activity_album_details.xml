@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/default_spacing">
+
+    <ImageView
+        android:id="@+id/album_details_artwork_view"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/album_artwork"
+        tools:src="@tools:sample/backgrounds/scenic"/>
+
+    <TextView
+        android:id="@+id/album_details_title_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_details_artwork_view"
+        android:layout_marginTop="@dimen/default_spacing"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:text="Album Title"/>
+
+    <TextView
+        android:id="@+id/album_details_artist_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_details_title_view"
+        android:gravity="center"
+        android:textSize="18sp"
+        tools:text="Artist Name"/>
+
+    <TextView
+        android:id="@+id/album_details_genre_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_details_artist_view"
+        android:gravity="center"
+        tools:text="Genre"/>
+
+    <TextView
+        android:id="@+id/album_details_release_date_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_details_genre_view"
+        android:gravity="center"
+        tools:text="@tools:sample/date/mmddyy"/>
+
+    <TextView
+        android:id="@+id/album_details_copyright_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/album_details_release_date_view"
+        android:layout_marginTop="@dimen/default_half_spacing"
+        android:gravity="center"
+        android:textSize="12sp"
+        tools:text="Copyright Information"/>
+
+    <Button
+        android:id="@+id/album_details_goto_apple_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/go_to_album"/>
+
+</android.support.constraint.ConstraintLayout>
